@@ -7,6 +7,7 @@
 import ClassicEditorBase from "@ckeditor/ckeditor5-editor-classic/src/classiceditor";
 import InlineEditorBase from "@ckeditor/ckeditor5-editor-inline/src/inlineeditor";
 
+import Autosave from "@ckeditor/ckeditor5-autosave/src/autosave";
 import Essentials from "@ckeditor/ckeditor5-essentials/src/essentials";
 import UploadAdapter from "@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter";
 import Autoformat from "@ckeditor/ckeditor5-autoformat/src/autoformat";
@@ -62,7 +63,7 @@ const plugins = [
 ];
 
 ClassicEditor.builtinPlugins = plugins;
-InlineEditor.builtinPlugins = plugins;
+InlineEditor.builtinPlugins = plugins.concat([Autosave]);
 
 // Editor configuration.
 const config = {
