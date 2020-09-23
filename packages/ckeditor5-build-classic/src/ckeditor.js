@@ -28,6 +28,7 @@ import List from "@ckeditor/ckeditor5-list/src/list";
 import MediaEmbed from "@ckeditor/ckeditor5-media-embed/src/mediaembed";
 import Paragraph from "@ckeditor/ckeditor5-paragraph/src/paragraph";
 import PasteFromOffice from "@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice";
+import Placeholder from "../plugins/tokens";
 import Table from "@ckeditor/ckeditor5-table/src/table";
 import TableToolbar from "@ckeditor/ckeditor5-table/src/tabletoolbar";
 import TextTransformation from "@ckeditor/ckeditor5-typing/src/texttransformation";
@@ -57,6 +58,7 @@ const plugins = [
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
+	Placeholder,
 	Table,
 	TableToolbar,
 	TextTransformation,
@@ -86,6 +88,8 @@ const config = {
 			"mediaEmbed",
 			"undo",
 			"redo",
+			"|",
+			"placeholder",
 		],
 	},
 	image: {
