@@ -99,7 +99,7 @@ function getDropdownItemsDefinitions(placeholderNames) {
 		const definition = {
 			type: "button",
 			model: new Model({
-				commandParam: name,
+				commandParam: "[" + name + "]",
 				label: name,
 				withText: true,
 			}),
@@ -167,8 +167,9 @@ class PlaceholderEditing extends Plugin {
 				classes: ["placeholder"],
 			},
 			model: (viewElement, { writer: modelWriter }) => {
-				// Extract the "name" from "{name}".
-				const name = viewElement.getChild(0).data.slice(1, -1);
+				// Extract the "name" from "[name]".
+				// const name = viewElement.getChild(0).data.slice(1, -1);
+				const name = viewElement.getChild(0).data;
 
 				return modelWriter.createElement("placeholder", { name });
 			},
@@ -202,7 +203,8 @@ class PlaceholderEditing extends Plugin {
 			});
 
 			// Insert the placeholder name (as a text).
-			const innerText = viewWriter.createText("[" + name + "]");
+			// const innerText = viewWriter.createText("[" + name + "]");
+			const innerText = viewWriter.createText(name);
 			viewWriter.insert(
 				viewWriter.createPositionAt(placeholderView, 0),
 				innerText
