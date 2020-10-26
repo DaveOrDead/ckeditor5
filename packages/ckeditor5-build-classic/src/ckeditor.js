@@ -17,6 +17,7 @@ import BlockQuote from "@ckeditor/ckeditor5-block-quote/src/blockquote";
 import CKFinder from "@ckeditor/ckeditor5-ckfinder/src/ckfinder";
 import EasyImage from "@ckeditor/ckeditor5-easy-image/src/easyimage";
 import Heading from "@ckeditor/ckeditor5-heading/src/heading";
+import Highlight from "@ckeditor/ckeditor5-highlight/src/highlight";
 import Image from "@ckeditor/ckeditor5-image/src/image";
 import ImageCaption from "@ckeditor/ckeditor5-image/src/imagecaption";
 import ImageStyle from "@ckeditor/ckeditor5-image/src/imagestyle";
@@ -47,6 +48,7 @@ const plugins = [
 	CKFinder,
 	EasyImage,
 	Heading,
+	Highlight,
 	Image,
 	ImageCaption,
 	ImageStyle,
