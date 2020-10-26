@@ -95,19 +95,19 @@ class PlaceholderUI extends Plugin {
 function getDropdownItemsDefinitions(placeholderNames) {
 	const itemDefinitions = new Collection();
 
-	for (const name of placeholderNames) {
+	placeholderNames.forEach((item) => {
 		const definition = {
 			type: "button",
 			model: new Model({
-				commandParam: "[" + name + "]",
-				label: name,
+				commandParam: item.value,
+				label: item.name,
 				withText: true,
 			}),
 		};
 
 		// Add the item definition to the collection.
 		itemDefinitions.add(definition);
-	}
+	});
 
 	return itemDefinitions;
 }
