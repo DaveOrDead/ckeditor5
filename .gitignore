@@ -14,3 +14,6 @@ yarn.lock
 # Ignore `mrgit.json` this file contains info about external repositories.
 mrgit.json
 packages/ckeditor5-build-classic/.DS_Store
+.DS_Store
+packages/.DS_Store
+packages/ckeditor5-build-classic/package-lock.json
