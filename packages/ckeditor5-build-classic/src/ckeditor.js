@@ -61,6 +61,7 @@ const config = {
 			"|",
 			"bold",
 			"italic",
+			"highlight",
 			"link",
 			"bulletedList",
 			"numberedList",
